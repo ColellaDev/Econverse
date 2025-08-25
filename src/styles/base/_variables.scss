@@ -1,0 +1,44 @@
+@use 'sass:map';
+
+$colors: (
+  "whiteBasic": #ffffff,
+  "background-dark": #f6f5f2,
+
+  "primary": #9f9f9f,
+  "primary-dark": #3F3F40,
+  "primary-light": #f0f0f0,
+
+  "secundary": #3019b2,  
+  "secundary-light": #3442B5,
+  "secundary-dark": #271c47,
+  
+  "accent": #f7ca11,
+  "line": #DEDEDE,
+);
+
+@function color($color-name) {
+  @return map.get($colors, $color-name);
+}
+
+$font-family-base: 'Poppins', sans-serif;
+$font-family-alternative: 'Work Sans', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$font-size-base: 1.6rem;
+
+$breakpoints: (
+  "xs": 480px,
+  "sm": 640px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px
+);
+
+@function breakpoint($size) {
+  @return map.get($breakpoints, $size);
+}

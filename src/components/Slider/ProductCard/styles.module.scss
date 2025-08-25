@@ -1,0 +1,54 @@
+@use "../../../styles/base/variables";
+
+.productCardContainer {
+    flex-shrink: 0;
+    width: 30rem;
+    height: 50rem;
+    border: 2px solid variables.color(line);
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.25),
+               4px 0 4px -4px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.pStandart {
+    font-size: 1.5rem;
+    color: variables.color(primary-dark);
+}
+
+.originalPrice {
+    font-size: 1.4rem;
+    text-decoration: line-through;
+    margin-top: 1.2rem;
+}
+
+.currentPrice {
+    font-size: 2rem;
+    color: variables.color(primary-dark);
+    font-weight: variables.$font-weight-bold;
+}
+
+.installmentPrice {
+    font-size: 1.2rem;
+    color: variables.color(primary-dark);
+}
+
+.spanDeliver {
+    font-size: 1.2rem;
+    color: variables.color(secundary);
+    margin-top: 1.2rem;
+}
+
+.button {
+    width: 27.5rem;
+    height: 4.4rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: variables.color(secundary-light);
+    color: variables.color(whiteBasic);
+    font-size: 1.6rem;
+    font-weight: variables.$font-weight-semibold;
+    transition: filter 0.2s;
+    margin-top: 1.2rem;
+}
