@@ -1,12 +1,8 @@
 import type { ProductTypes } from '../types/product';
 
-const API_URL = import.meta.env.VITE_API_URL as string;
+const API_URL = '/products.json';
 
 export async function fetchProducts(): Promise<ProductTypes[]> {
-  if (!API_URL) {
-    throw new Error('VITE_API_URL não definida');
-  }
-
   const res = await fetch(API_URL);
 
   if (!res.ok) {
