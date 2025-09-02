@@ -5,7 +5,12 @@ import { ProductCard } from "./ProductCard";
 import { ProductModal } from "./ProductModal"
 import type { ProductTypes } from "../../types/product";
 
-export function Slider() {
+interface SliderProps {
+    searchTerms: string;
+}
+
+
+export function Slider({searchTerms}:SliderProps) {
     const [products, setProducts] = useState<ProductTypes[]>([]);
     const [selectedProduct, setSelectedProduct] = useState<ProductTypes | null>(null);
     const [isAtStart, setIsAtStart] = useState(true);
@@ -66,6 +71,10 @@ export function Slider() {
         }
     };
 
+   const filteredProducts = products.filter(product =>
+     product.productName.toLowerCase().includes(searchTerms.toLowerCase())
+   );
+
     return (
         <>
             <div className={styles.sliderWrapper}>
@@ -76,7 +85,7 @@ export function Slider() {
                     aria-label="Anterior"
                 >‹</button>
                 <div className={styles.sliderContainer} ref={sliderRef}>
-                    {products.map((product) => (
+                    {filteredProducts.map((product) => (
                         <ProductCard key={product.productName} product={product} onClick={handleOpenModal} />
                     ))}
                 </div>

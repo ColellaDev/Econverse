@@ -8,12 +8,21 @@ import Heart from '../../../assets/icons/Heart.svg'
 import UserCircle from '../../../assets/icons/UserCircle.svg'
 import ShoppingCart from '../../../assets/icons/ShoppingCart.svg'
 
-export function HeaderMiddle() {
+type HeaderMiddleProps ={
+  searchTerms: string;
+  setSearchTerms: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export function HeaderMiddle({searchTerms, setSearchTerms}:HeaderMiddleProps) {
   return (
     <div className={styles.middleContainer}>
       <img src={Logo} alt="Logo" />
       <div className={styles.searchWrapper}>
-        <input type="text" placeholder="O que você está buscando?" />
+        <input 
+          value={searchTerms}
+          onChange={(e) => setSearchTerms(e.target.value)}
+          type="text" 
+          placeholder="O que você está buscando?" />
         <img src={Search} alt="Ícone de busca" />
       </div>
       <div className={styles.iconsWrapper}>

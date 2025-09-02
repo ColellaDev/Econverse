@@ -4,11 +4,16 @@ import { HeaderTop } from './HeaderTop';
 import { HeaderMiddle } from './HeaderMiddle';
 import { HeaderBottom } from './HeaderBottom';
 
-export function Header() {
+type SearchProps ={
+  searchTerms: string;
+  setSearchTerms: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export function Header({searchTerms, setSearchTerms}:SearchProps) {
   return (
     <header className={styles.headerContainer}>
       <HeaderTop />
-      <HeaderMiddle />
+      <HeaderMiddle searchTerms={searchTerms} setSearchTerms={setSearchTerms}/>
       <HeaderBottom />
     </header>
   );

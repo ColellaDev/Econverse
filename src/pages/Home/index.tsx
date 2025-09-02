@@ -8,20 +8,23 @@ import { NewsLetter } from "../../components/NewsLetter";
 import { Footer } from "../../components/Footer";
 import { FooterCopyright } from "../../components/FooterCopyright";
 import { RelatedProducts } from "../../components/RelatedProducts";
+import { useState } from "react";
 
 export function Home() {
 
+  const [searchTerms, setSearchTerms] = useState('')
+
   return (
     <>
-      <Header />
+      <Header searchTerms={searchTerms} setSearchTerms={setSearchTerms} />
       <Hero/>
       <Categories/>
-      <ProductNav/>
+      <ProductNav searchTerms={searchTerms}/>
       <Partners/>
-      <RelatedProducts/>
+      <RelatedProducts searchTerms={searchTerms}/>
       <Partners/>
       <Brands/> 
-      <RelatedProducts/>
+      <RelatedProducts searchTerms={searchTerms}/>
       <NewsLetter/>
       <Footer/>
       <FooterCopyright/>
