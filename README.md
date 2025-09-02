@@ -1,19 +1,18 @@
-# Teste Econverse: Vaga Desenvolvedor Front-End
+# Teste Econverse Desenvolvedor Front-End
  
-Este é o projeto desenvolvido para o teste de Desenvolvedor Front-End da Econverse.
+Este é o projeto desenvolvido inicialmente para o teste de Desenvolvedor Front-End da Econverse, após a entrega criei esse novo repositório para continuar aperfeiçoando e testando melhorias.
+
+## Deploy
+Teste nesse link: https://econversetest.netlify.app/
+## Preview
+<img width="778" height="917" alt="EconversePreview" src="https://github.com/user-attachments/assets/f945f4ae-b2ec-409d-87af-48acbf8ab3fc" />
 
 ## Como Rodar o Projeto
-
-### Requisitos
-- Node.js (versão recomendada: 18.x ou superior)
-- npm ou yarn (gerenciadores de pacotes)
-- Git para clonar repositório
-
 Para visualizar o projeto em sua máquina local, siga os passos abaixo:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/ColellaDev/teste-front-end.git
+    git clone https://github.com/ColellaDev/econverse.git
     ```
 
 2.  **Navegue até o diretório do projeto:**
@@ -25,12 +24,8 @@ Para visualizar o projeto em sua máquina local, siga os passos abaixo:
     ```bash
     npm install
     ```
-4.  **Crie um arquivo .env.local na raiz do projeto e adicione a variável de ambiente:**
-     ```env
-    VITE_API_URL="/api/teste-front-end/junior/tecnologia/lista-produtos/produtos.json"
-     ```
 
-6.  **Inicie o servidor de desenvolvimento:**
+4.  **Inicie o servidor de desenvolvimento:**
     ```bash
     npm run dev
     ```
